@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let arr1 = ["100,1", "100", "7,8", "23"];
+
+        function parse(numStr) {
+            return Number(numStr.split(",").join(""));
+        }
+
+        function sort2(arr) {
+            const numArr = [...arr].sort((a, b) => parse(a) - parse(b));
+
+            return numArr;
+        }
+
+        console.log(sort2(arr1));
+    </script>
+</body>
+
+</html>
